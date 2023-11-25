@@ -59,7 +59,7 @@ public class GameManaGer : MonoBehaviour
     private void RotateBall()
     {
         xInput = Input.GetAxis("Horizontal");
-        cueBall.transform.Rotate(new Vector3(0f, xInput/10 , 0f));
+        cueBall.transform.Rotate(new Vector3(0f, xInput , 0f));
         
     }
 
@@ -67,7 +67,7 @@ public class GameManaGer : MonoBehaviour
     {
         camera.transform.parent = null;
         Rigidbody rb = cueBall.GetComponent<Rigidbody>();
-        rb.AddRelativeForce(Vector3.forward * 50, ForceMode.Impulse);
+        rb.AddRelativeForce(Vector3.forward * 50 , ForceMode.Impulse);
         ballLine.SetActive(false);
     }
 
